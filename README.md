@@ -14,24 +14,41 @@ JuMoM程序的基本构成如下图所示:![JuMoMs 包结构](deps/MoM_packages_
 
 #### 安装教程
 
-1.  在本地安装 Julia，可参照 [Julia 中文社区相关指引](https://discourse.juliacn.com/t/topic/159)，建议配合 [VScode](https://code.visualstudio.com/) 与 [Julia 插件](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)使用；
-2.  将本包下载或git clone 到本地：
-```powwershell
-git clone https://gitee.com/deltaeecs/JuMoMs.git
-```
-3.  在本包路径下（xxx\\JuMoMs）运行如下命令安装相关依赖包：
-```powwershell
-julia -t 8 deps/install.jl
-```
-4.  测试，在包目录进入 Julia REPL (VScode中快捷键为连按 alt+j, alt+o)：
-```julia
-julia> 
-```
-进入包管理（Pkg）模式（REPL中空白行输入`:`）,输入`test`后回车:
-```julia
-(JuMoMs) pkg> test
-```
-将自动运行[examples](./examples/)文件夹中的8个测试程序，并绘图比较与 Feko 的结果，图片保存在[figures](./figures/)文件夹中。
+1. 在本地安装 Julia，可参照 [Julia 中文社区相关指引](https://discourse.juliacn.com/t/topic/159)，建议配合 [VScode](https://code.visualstudio.com/) 与 [Julia 插件](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)使用；
+
+2. 将本包下载或git clone 到本地：
+
+    ```powwershell
+    git clone https://gitee.com/deltaeecs/JuMoMs.git
+    ```
+
+3. 在本包路径下（xxx/JuMoMs）运行如下命令安装相关依赖包：
+
+    ```powwershell
+    julia -t 8 deps/install.jl
+    ```
+
+4. 测试，在包目录进入 Julia REPL (VScode 中快捷键为连按 alt+j, alt+o)：
+
+    ```julia
+    julia> 
+    ```
+
+    进入包管理（Pkg）模式（REPL中空白行输入`]`），输入
+
+    ```julia
+    (@v1.8) pkg> activate .
+    ```
+
+    激活 JuMoMs 环境。
+
+    输入:
+
+    ```julia
+    (JuMoMs) pkg> test
+    ```
+
+    将自动运行[examples](./examples/)文件夹中的8个测试程序，并绘图比较与 Feko 的结果，图片保存在[figures](./figures/)文件夹中。
 
 #### 使用说明
 
