@@ -10,7 +10,7 @@ setPrecision!(Float32)
 SimulationParams.SHOWIMAGE = true
 
 # 网格文件
-filename = joinpath(@__DIR__, "..", "meshfiles/f22_100MHz.nas")
+filename = joinpath(@__DIR__, "..", "meshfiles/jet_100MHz.nas")
 meshUnit = :m
 ## 设置输入频率（Hz）从而修改内部参数
 frequency = 1e8
@@ -41,12 +41,12 @@ include(joinpath(@__DIR__, "../src/fast_solver.jl"))
 
 ## 比较绘图
 # 导入feko数据
-feko_RCS_file = joinpath(@__DIR__, "../deps/compare_feko/f22_100MHzRCS.csv")
+feko_RCS_file = joinpath(@__DIR__, "../deps/compare_feko/jet_100MHzRCS.csv")
 data_feko = DataFrame(CSV.File(feko_RCS_file, delim=' ', ignorerepeated=true))
 RCS_feko = reshape(data_feko[!, "in"], :, 2)
 
 # 绘图保存
 fig = farfield2D(θs_obs, 10log10.(RCS_feko), 10log10.(RCS[:, 1:2:3]),
-                ["Feko  (ϕ = 0°)", "Feko  (ϕ = 90°)"], ["JuMoM (ϕ = 0°)", "JuMoM (ϕ = 90°)"],
-                ylabel = L"\text{RCS(dBsm)}", legendposition = :lb)
-save(joinpath(@__DIR__, "..", "figures/RCScompare_f22_100MHz_fast.pdf"), fig)
+                [L"\text{Feko} (\phi = 0^{\circ})", L"\text{Feko} (\phi = 90^{\circ})"], [L"\text{JuMoM} (\phi = 0^{\circ})", L"\text{JuMoM} (\phi = 90^{\circ})"],
+                xlabel = L"\theta (^{\circ})", ylabel = L"\text{RCS(dBsm)}", legendposition = :lb)
+save(joinpath(@__DIR__, "..", "figures/SEFIE_RCS_jet_100MHz_fast.pdf"), fig)

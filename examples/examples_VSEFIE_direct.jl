@@ -47,6 +47,6 @@ RCS_feko = reshape(data_feko[!, "in"], :, 2)
 
 # 绘图保存
 fig = farfield2D(θs_obs, 10log10.(RCS_feko), 10log10.(RCS[:, 1:2:3]),
-                ["Feko  (ϕ = 0°)", "Feko  (ϕ = 90°)"], ["JuMoM (ϕ = 0°)", "JuMoM (ϕ = 90°)"],
-                ylabel = L"\text{RCS(dBsm)}", legendposition = :rt)
-save(joinpath(@__DIR__, "..", "figures/RCScompare_plate_metal_1dot2GHz_direct.pdf"), fig)
+                [L"\text{Feko} (\phi = 0^{\circ})", L"\text{Feko} (\phi = 90^{\circ})"], [L"\text{JuMoM} (\phi = 0^{\circ})", L"\text{JuMoM} (\phi = 90^{\circ})"],
+                xlabel = L"\theta (^{\circ})", ylabel = L"\text{RCS(dBsm)}", legendposition = :rt)
+save(joinpath(@__DIR__, "..", "figures/VSEFIE_RCS_plate_metal_1dot2GHz_direct.pdf"), fig)

@@ -1,6 +1,6 @@
 $ NASTRAN file exported by CADFEKO version 2021-2100 (x64)
 $
-$ Filename: C:/Users/12253/OneDrive/Julia/MoM_Lebedev/meshfiles/f22_100MHz.nas
+$ Filename: C:/Users/12253/OneDrive/Julia/MoM_Lebedev/meshfiles/jet_100MHz.nas
 $ Date:     ?? 3? 24 2023
 $
 $ Number of segments:             0
