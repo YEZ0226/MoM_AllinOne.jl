@@ -47,6 +47,6 @@ RCS_feko = reshape(data_feko[!, "in"], :, 2)
 
 # 绘图保存
 fig = farfield2D(θs_obs, 10log10.(RCS_feko), 10log10.(RCS[:, 1:2:3]),
-                [L"\text{Feko} (\phi = 0^{\circ})", L"\text{Feko} (\phi = 90^{\circ})"], [L"\text{JuMoM} (\phi = 0^{\circ})", L"\text{JuMoM} (\phi = 90^{\circ})"],
+                [L"\text{Feko} (\phi = 0^{\circ})", L"\text{Feko} (\phi = 90^{\circ})"], [L"\text{CEM_MoMs} (\phi = 0^{\circ})", L"\text{CEM_MoMs} (\phi = 90^{\circ})"],
                 xlabel = L"\theta (^{\circ})", ylabel = L"\text{RCS(dBsm)}", legendposition = :lb)
 save(joinpath(@__DIR__, "..", "figures/SEFIE_RCS_jet_100MHz_fast.pdf"), fig)

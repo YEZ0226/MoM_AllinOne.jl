@@ -1,5 +1,5 @@
-module JuMoMs
+module CEM_MoMs
 
 using MoM_Basics, MoM_Kernels, MoM_Visualizing
 
-end # module JuMoMs
+end # module CEM_MoMs
