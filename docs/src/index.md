@@ -65,13 +65,13 @@ CEM_MoMs 程序的基本构成如下图所示:![CEM_MoMs 包结构](deps/MoM_pac
 
     或 git clone 到本地：
 
-    ```powwershell
+    ```bash
     git clone https://gitee.com/deltaeecs/CEM_MoMs.git
     ```
 
     紧接着，在本包路径下（xxx/CEM_MoMs）运行如下命令安装相关依赖包：
 
-    ```powwershell
+    ```bash
     julia -t 8 deps/install.jl
     ```
 
