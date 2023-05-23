@@ -2,3 +2,4 @@
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 MoM_Basics = "84796d1e-6a74-43fe-971c-cdafebd16eaa"
 MoM_Kernels = "831fc53b-0fa6-4fbb-adc4-fa1e0b19763e"
+MoM_Visualizing = "cbf82f24-4841-4ec9-b0f8-e22c06a1387c"
