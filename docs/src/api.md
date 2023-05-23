@@ -3,5 +3,5 @@
 ```
 
 ```@autodocs
-Modules = [MoM_Basics, MoM_Kernels, MPI_Visualizing]
+Modules = [MoM_Basics, MoM_Kernels, MoM_Visualizing]
 ```
