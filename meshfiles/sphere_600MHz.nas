@@ -1,8 +1,5 @@
 $ NASTRAN file exported by CADFEKO version 2021-2100 (x64)
 $
-$ Filename: C:/Users/12253/OneDrive/????/??????/PhD/meshfiles/sphere_600MHz.nas
-$ Date:     ?? 4? 1 2023
-$
 $ Number of segments:             0
 $           triangles:        17616
 $           cuboids:              0

@@ -1,4 +1,10 @@
-![MoM](./docs/src/assets/logo.png)
+```@meta
+DocTestSetup = quote
+    using MoM_Kernels
+end
+```
+
+![MoM](./assets/logo.png)
 # CEM_MoMs
 
 ![star](https://img.shields.io/github/stars/deltaeecs/CEM_MoMs.jl?style=social)

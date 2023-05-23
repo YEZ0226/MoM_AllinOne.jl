@@ -23,6 +23,9 @@ docs/site/
 # environment.
 Manifest.toml
 
+# vscode
+.vscode
+
 # software
-results/*
+results*
 test/results/*

@@ -1,8 +1,5 @@
 $ NASTRAN file exported by CADFEKO version 2021-2100 (x64)
 $
-$ Filename: C:/Users/12253/OneDrive/????/??????/PhD/meshfiles/plate_1dot2GHz.nas
-$ Date:     ?? 4? 2 2023
-$
 $ Number of segments:             0
 $           triangles:            0
 $           cuboids:              0

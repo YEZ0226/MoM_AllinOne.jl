@@ -1,5 +1,5 @@
 ## 导入程序包
-using MoM_Basics, MoM_Kernels, MoM_Visualizing
+using CEM_MoMs
 # using MKL, MKLSparse
 using DataFrames, CSV, LaTeXStrings
 using CairoMakie, MoM_Visualizing
@@ -34,7 +34,7 @@ source  =   PlaneWave(π/2, 0, 0f0, 1f0)
 
 ## 观测角度
 θs_obs  =   LinRange{Precision.FT}(  -π, π,  721)
-ϕs_obs  =   LinRange{Precision.FT}(  0, π/2,  3 )
+ϕs_obs  =   LinRange{Precision.FT}(  0, π/2,  2 )
 
 # 计算脚本
 include(joinpath(@__DIR__, "../src/fast_solver.jl"))
@@ -46,7 +46,8 @@ data_feko = DataFrame(CSV.File(feko_RCS_file, delim=' ', ignorerepeated=true))
 RCS_feko = reshape(data_feko[!, "in"], :, 2)
 
 # 绘图保存
-fig = farfield2D(θs_obs, 10log10.(RCS_feko), 10log10.(RCS[:, 1:2:3]),
-                [L"\text{Feko} (\phi = 0^{\circ})", L"\text{Feko} (\phi = 90^{\circ})"], [L"\text{CEM_MoMs} (\phi = 0^{\circ})", L"\text{CEM_MoMs} (\phi = 90^{\circ})"],
-                xlabel = L"\theta (^{\circ})", ylabel = L"\text{RCS(dBsm)}", legendposition = :lb)
+fig = farfield2D(θs_obs, 10log10.(RCS_feko), 10log10.(RCS),
+                [L"\text{Feko}\;\quad (\phi = \enspace0^{\circ})", L"\text{Feko}\;\quad (\phi = 90^{\circ})"], 
+                [L"\text{JuMoM} (\phi = \enspace0^{\circ})", L"\text{JuMoM} (\phi = 90^{\circ})"],
+                xlabel = L"\theta (^{\circ})", ylabel = L"\text{RCS(dBsm)}", x_unit = :rad, legendposition = :lb)
 save(joinpath(@__DIR__, "..", "figures/SEFIE_RCS_jet_100MHz_fast.pdf"), fig)
