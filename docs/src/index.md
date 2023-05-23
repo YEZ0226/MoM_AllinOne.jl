@@ -1,6 +1,6 @@
 ```@meta
 DocTestSetup = quote
-    using MoM_Kernels
+    using CEM_MoMs
 end
 ```
 
