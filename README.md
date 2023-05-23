@@ -69,13 +69,12 @@ CEM_MoMs 程序的基本构成如下图所示:![CEM_MoMs 包结构](deps/MoM_pac
     julia -t 8 deps/install.jl
     ```
 
-3. 测试，进入包管理（Pkg）模式，输入:
+3. 测试，导入本包运行 `run_examples()` 函数即可自动运行 [examples](./examples/) 文件夹中的8个测试程序，并绘图比较与 Feko 的结果，图片（ `.pdf` 格式）保存在 [figures](./figures/) 文件夹中。
 
     ```julia
-    (CEM_MoMs) pkg> test CEM_MoMs
+    using CEM_MoMs
+    run_examples()
     ```
-
-    将自动运行 [examples](./examples/) 文件夹中的8个测试程序，并绘图比较与 Feko 的结果，图片（ `.pdf` 格式）保存在 [figures](./figures/) 文件夹中。
 
 ## 使用说明
 

@@ -50,4 +50,6 @@ fig = farfield2D(θs_obs, 10log10.(RCS_feko), 10log10.(RCS),
                 [L"\text{Feko}\;\quad (\phi = \enspace0^{\circ})", L"\text{Feko}\;\quad (\phi = 90^{\circ})"], 
                 [L"\text{JuMoM} (\phi = \enspace0^{\circ})", L"\text{JuMoM} (\phi = 90^{\circ})"],
                 xlabel = L"\theta (^{\circ})", ylabel = L"\text{RCS(dBsm)}", x_unit = :rad, legendposition = :lb)
-save(joinpath(@__DIR__, "..", "figures/SEFIE_RCS_jet_100MHz_fast.pdf"), fig)
+savedir = joinpath(@__DIR__, "..", "figures")
+!ispath(savedir) && mkpath(savedir)
+save(joinpath(savedir, "SEFIE_RCS_jet_100MHz_fast.pdf"), fig)

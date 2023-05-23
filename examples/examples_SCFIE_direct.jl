@@ -51,4 +51,6 @@ fig = farfield2D(θs_obs, 10log10.(RCS_feko), 10log10.(RCS),
                 [L"\text{Feko}\;\quad (\phi = \enspace0^{\circ})", L"\text{Feko}\;\quad (\phi = 90^{\circ})"], 
                 [L"\text{JuMoM} (\phi = \enspace0^{\circ})", L"\text{JuMoM} (\phi = 90^{\circ})"],
                 xlabel = L"\theta (^{\circ})", ylabel = L"\text{RCS(dBsm)}", x_unit = :rad, legendposition = :rt)
-save(joinpath(@__DIR__, "..", "figures/SCFIE_RCS_sphere_600MHz_direct.pdf"), fig)
+savedir = joinpath(@__DIR__, "..", "figures")
+!ispath(savedir) && mkpath(savedir)
+save(joinpath(savedir, "SCFIE_RCS_sphere_600MHz_direct.pdf"), fig)
