@@ -61,6 +61,6 @@ jobs:
       - run: |
           xvfb-run julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using CEM_MoMs
-            DocMeta.setdocmeta!(CEM_MoMs, :DocTestSetup, :(using CEM_MoMs); recursive=true)
-            doctest(CEM_MoMs)'
+            using MoM_AllinOne
+            DocMeta.setdocmeta!(MoM_AllinOne, :DocTestSetup, :(using MoM_AllinOne); recursive=true)
+            doctest(MoM_AllinOne)'

@@ -1,4 +1,4 @@
-module CEM_MoMs
+module MoM_AllinOne
 
 using Reexport
 @reexport using MoM_Basics, MoM_Kernels, MoM_Visualizing
@@ -16,4 +16,4 @@ function run_examples(;targetdir = joinpath(@__DIR__, "../examples"))
     nothing
 end
 
-end # module CEM_MoMs
+end # module MoM_AllinOne
